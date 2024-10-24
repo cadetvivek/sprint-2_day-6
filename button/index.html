@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Info Box</title>
+    <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.center-btn {
+    padding: 15px 25px;
+    font-size: 16px;
+    color: white;
+    background-color: #ff3b3b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.center-btn:focus {
+    outline: none;
+}
+
+#infoBox {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    background-color: #1c87c9;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+/* Button click interaction */
+.center-btn:active {
+    display: none;
+}
+
+/* When button is clicked, show the info box */
+.center-btn:active + #infoBox {
+    display: block;
+}
+
+
+    </style>
+</head>
+<body>
+    <body>
+        <button id="showInfo" class="center-btn">Read Info</button>
+        <div id="infoBox" class="hidden">This is the info box!</div>
+    </body>
+</body>
+</html>
