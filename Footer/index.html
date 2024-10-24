@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Footer</title>
+   <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer {
+            background-color: #1a237e;
+            color: white;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 4rem;
+        }
+
+        .logo-container img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+        }
+
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+
+        .footer-column h3 {
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            font-weight: 500;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .footer-column ul li a:hover {
+            opacity: 1;
+        }
+
+        .bottom-bar {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .bottom-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .location img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .bottom-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .bottom-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .bottom-links a:hover {
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-links {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .bottom-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .bottom-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="logo-container">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTtFU2wQBtNN_UnljMnAGzYmADAX147ABmew&s" alt="Logo">
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">Gift cards</a></li>
+                        <li><a href="#">Etsy Registry</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Etsy blog</a></li>
+                        <li><a href="#">Etsy United Kingdom</a></li>
+                        <li><a href="#">Etsy Germany</a></li>
+                        <li><a href="#">Etsy Canada</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Sell</h3>
+                    <ul>
+                        <li><a href="#">Sell on Etsy</a></li>
+                        <li><a href="#">Teams</a></li>
+                        <li><a href="#">Forums</a></li>
+                        <li><a href="#">Affiliates & Creators</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Etsy, Inc.</a></li>
+                        <li><a href="#">Policies</a></li>
+                        <li><a href="#">Investors</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Impact</a></li>
+                        <li><a href="#">Legal imprint</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">Gift cards</a></li>
+                        <li><a href="#">Etsy Registry</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                        <li><a href="#">Etsy blog</a></li>
+                        <li><a href="#">Etsy United Kingdom</a></li>
+                        <li><a href="#">Etsy Germany</a></li>
+                        <li><a href="#">Etsy Canada</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bottom-bar">
+        <div class="bottom-content">
+            <div class="location">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy1tlNE11QsYpf_AEgY37HO2iLNck3u5Lt6A&s" alt="India flag">
+                <span>India</span>
+                <span>|</span>
+                <span>English (IN)</span>
+                <span>|</span>
+                <span>₹ (INR)</span>
+            </div>
+            <div class="bottom-links">
+                <span>© 2024 Etsy, Inc.</span>
+                <a href="#">Terms of Use</a>
+                <a href="#">Privacy</a>
+                <a href="#">Interest-based ads</a>
+                <a href="#">Local Shops</a>
+                <a href="#">Regions</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

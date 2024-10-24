@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container queries</title>
+</head>
+<body>
+    
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                min-height: 100vh;
+                font-family: Arial, sans-serif;
+            }
+    
+            .container {
+                display: grid;
+                min-height: 100vh;
+                grid-template-areas:
+                    "header header header"
+                    "sidebar main rightbar";
+                grid-template-rows: 80px 1fr;
+                grid-template-columns: 200px 1fr 250px;
+            }
+    
+            .header {
+                grid-area: header;
+                background-color: #9933cc;
+                padding: 1rem;
+            }
+    
+            .sidebar {
+                grid-area: sidebar;
+                background-color: #fff;
+                padding: 1rem;
+            }
+    
+            .sidebar-item {
+                background-color: #33b5e5;
+                margin-bottom: 1rem;
+                padding: 0.8rem;
+                border-radius: 4px;
+            }
+    
+            .main-content {
+                grid-area: main;
+                background-color: #fff;
+                padding: 1rem;
+            }
+    
+            .right-sidebar {
+                grid-area: rightbar;
+                background-color: #33b5e5;
+                padding: 1rem;
+            }
+               /* for mobile scree */
+            @media (max-width: 768px) {
+                .container {
+                    grid-template-areas:
+                        "header"
+                        "sidebar"
+                        "main"
+                        "rightbar";
+                    grid-template-columns: 1fr;
+                    grid-template-rows: auto;
+                }
+            }
+        </style>
+        <title>Desktop Layout</title>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header"></header>
+            <aside class="sidebar">
+                <div class="sidebar-item"></div>
+                <div class="sidebar-item"></div>
+                <div class="sidebar-item"></div>
+                <div class="sidebar-item"></div>
+            </aside>
+            <main class="main-content"></main>
+            <aside class="right-sidebar"></aside>
+        </div>
+   
+</body>
+</html>
